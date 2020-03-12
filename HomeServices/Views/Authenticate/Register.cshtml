@@ -1,0 +1,26 @@
+﻿@model DataAccessLayer.Models.RegisterModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+<body>
+    <article>
+        @using (Html.BeginForm("Register", "Authenticate", FormMethod.Post)) {
+            @Html.EditorForModel()
+            <span>Type</span><br />
+            @*@Html.EditorFor(g=>g.Type)*@
+            @Html.DropDownListFor(g=>g.Type.ValueSelected,Model.Type.TypeOfUser,"Select a Type")
+            <br />
+            <input type="submit" value="Register" />
+        }
+    </article>
+    <h1>@Model.Type.ValueSelected</h1>
+</body>
+</html>

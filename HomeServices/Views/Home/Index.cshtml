@@ -1,0 +1,23 @@
+﻿@{ 
+    Layout = null;
+}
+<html>
+
+<head>
+    @*<link href="~/Content/Common.css" rel="stylesheet" />*@
+</head>
+<body>
+    <header>
+        @{Html.RenderAction("Header", "Design");}
+    </header>
+    <article>
+        <p>Description of the page</p>
+        <h3>List of services provided</h3>
+       
+    </article>
+    
+    <footer>
+        @{ Html.RenderAction("Footer", "Design");}
+    </footer>
+</body>
+</html>
